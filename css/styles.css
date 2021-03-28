@@ -1,0 +1,42 @@
+/* Mobile display */
+@media only screen and (max-width: 412px) {
+    
+}
+
+/* Desktop display */
+@media only screen and (min-width: 413px) {
+    .navbar {
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100%;
+        padding-top: 5rem !important;
+    }
+
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 140.250px;
+    }
+
+    .nav-link {
+        padding-left: 0 !important;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+}
+
+html, body {
+    height: 100%;
+}
+
+.navbar-collapse {
+    width: auto;
+}
