@@ -1,48 +1,51 @@
-/* Mobile display */
-@media only screen and (max-width: 412px) {
-    
+body {
+    padding-top: 90px
 }
 
-/* Desktop display */
-@media only screen and (min-width: 413px) {
-    .navbar {
+.navbar.fixed-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030
+}
+
+/* Tablet & Desktop display */
+@media (min-width:768px) {
+    body {
+        padding-top: 0;
+        margin-left: 232px;
+    }
+    .navbar.fixed-left {
+        bottom: 0;
+        right: auto;
+        width: 232px;
+        flex-flow: column nowrap;
+        align-items: flex-start
+    }
+    .navbar.fixed-left .navbar-collapse {
+        flex-grow: 0;
         flex-direction: column;
-        flex-wrap: wrap;
-        height: 100%;
-        /* padding-top: 5rem !important; */
+        width: 100%
     }
-
-    .navbar-collapse {
-        display: flex;
+    .navbar.fixed-left .navbar-collapse .navbar-nav {
         flex-direction: column;
+        width: 100%
     }
-
-    .navbar-nav {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        width: 140.250px;
+    .navbar.fixed-left .navbar-collapse .navbar-nav .nav-item {
+        width: 100%
     }
-
-    .nav-link {
-        padding-left: 0 !important;
+    .navbar.fixed-left .navbar-collapse .navbar-nav .nav-item .dropdown-menu {
+        top: 0
     }
-
-    .nav-item {
-        width: 100%;
+    .navbar.fixed-left .navbar-nav .nav-item .dropdown-toggle:after {
+        border-top: .3em solid transparent;
+        border-left: .3em solid;
+        border-bottom: .3em solid transparent;
+        border-right: none;
+        vertical-align: baseline
     }
-}
-
-html, body {
-    height: 100%;
-    width: 100%;
-    font-family: 'Playfair Display', serif !important;
-}
-
-.container-fluid {
-    height: 100%;
-}
-
-.navbar-collapse {
-    width: auto;
+    .navbar.fixed-left .navbar-nav .nav-item .dropdown-menu {
+        left: 100%;
+    }
 }
