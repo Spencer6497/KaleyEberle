@@ -71,3 +71,7 @@ function fixBodyMargin(className) {
 function selectTheme(theme) {
     $('#theme_link').attr('href', 'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/' + theme + '/bootstrap.min.css');
 }
+
+function myFunction(x) {
+    x.classList.toggle("change");
+  }
