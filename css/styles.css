@@ -10,6 +10,69 @@ body {
     z-index: 1030
 }
 
+.card, img {
+    border-radius: 0.5rem;
+}
+
+/* Animate card fade-in */
+/* .card {
+    animation: fadeIn 2.2s 1;
+    animation-fill-mode: forwards;
+} */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+/* dropdown stuff */
+.dropdown .dropdown-menu {
+    -webkit-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
+    -moz-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
+    -ms-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
+    -o-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
+    transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
+
+    max-height: 0;
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    position: static !important;
+}
+
+.dropdown.show .dropdown-menu {
+    -webkit-transition: max-height 0.3s, opacity 0.2s, visibility 0s;
+    -moz-transition: max-height 0.3s, opacity 0.2s, visibility 0s;
+    -ms-transition: max-height 0.3s, opacity 0.2s, visibility 0s;
+    -o-transition: max-height 0.3s, opacity 0.2s, visibility 0s;
+    transition: max-height 0.3s, opacity 0.2s, visibility 0s;
+
+    max-height: 190px;
+    opacity: 1;
+    visibility: visible;
+    position: static !important;
+}
+
+.dropdown-item {
+    text-align: center;
+    color: #fff !important;
+}
+
+.dropdown-item:hover {
+    background: none;
+}
+
+.dropdown-menu {
+    background-color: transparent;
+    box-shadow: unset;
+}
+
 /* Mobile */
 @media (max-width:767px) {
     #navbar-content {
@@ -58,15 +121,6 @@ body {
     li:nth-child(n+6) {
         animation-delay: 0.6s;
     }
-      
-    @keyframes fadeIn {
-        0% {
-            opacity: 0.0;
-        }
-        100% {
-            opacity: 1.0;
-        }
-    }
 
     /* Hamburger menu styling */
     .container {
@@ -102,6 +156,14 @@ body {
 
     button:focus {
         outline: none !important;
+    }
+
+    .dropdown-menu.show {
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        border-radius: unset;
+        width: 50%;
+        margin: auto;
     }
 }
 
