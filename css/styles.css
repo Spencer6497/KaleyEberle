@@ -11,7 +11,7 @@ body {
 }
 
 .card, img {
-    border-radius: 0.5rem;
+    border-radius: 0.5rem !important;
 }
 
 /* Animate card fade-in */
@@ -60,17 +60,19 @@ body {
 }
 
 .dropdown-item {
-    text-align: center;
-    color: #fff !important;
+    /* text-align: center; */
+    color: #ffffffbf !important;
 }
 
 .dropdown-item:hover {
     background: none;
+    color: #fff !important;
 }
 
 .dropdown-menu {
     background-color: transparent;
     box-shadow: unset;
+    border: none;
 }
 
 /* Mobile */
@@ -79,8 +81,16 @@ body {
         height: 100vh;
     }
 
+    h4 {
+        margin-bottom: 0;
+    }
+
     .navbar-collapse.collapse.show, .navbar-collapse.collapsing {
         text-align: center;
+    }
+
+    .nav-item {
+        padding-top: 0.5rem;
     }
 
     #menuRule {
@@ -88,7 +98,7 @@ body {
     }
 
     #navHolder {
-        padding-top: 20vh;
+        padding-top: 25vh;
     }
 
     nav {
@@ -159,11 +169,17 @@ body {
     }
 
     .dropdown-menu.show {
-        border-top: 1px solid #fff;
-        border-bottom: 1px solid #fff;
         border-radius: unset;
         width: 50%;
         margin: auto;
+    }
+
+    .dropdown-item {
+        text-align: center;
+    }
+
+    .card {
+        margin: 1rem;
     }
 }
 
@@ -171,14 +187,35 @@ body {
 @media (min-width:768px) {
     body {
         padding-top: 0;
-        margin-left: 232px;
+        margin-left: 250px;
     }
+
+    hr {
+        padding-top: 0.75rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        border-top: none;
+    }
+
+    #navHolder {
+        padding-left: 0;
+    }
+
+    .nav-link {
+        padding-left: 0 !important;
+    }
+
+    .nav-item {
+        padding-top: 0.75rem;
+    }
+    
     .navbar.fixed-left {
         bottom: 0;
         right: auto;
-        width: 232px;
+        width: 250px;
         flex-flow: column nowrap;
-        align-items: flex-start
+        align-items: flex-start;
+        padding-top: 3rem;
+        padding-left: 2rem;
     }
     .navbar.fixed-left .navbar-collapse {
         flex-grow: 0;
@@ -204,5 +241,17 @@ body {
     }
     .navbar.fixed-left .navbar-nav .nav-item .dropdown-menu {
         left: 100%;
+    }
+}
+
+/* Desktop only */
+@media (min-width:1025px) {
+    body {
+        margin-left: 18vw;
+    }
+
+    .navbar.fixed-left {
+        width: 18vw;
+        padding: 4rem 0 0 4rem;
     }
 }

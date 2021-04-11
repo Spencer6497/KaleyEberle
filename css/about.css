@@ -1,0 +1,8 @@
+img {
+    height: 40vh;
+    margin: auto;
+}
+
+h2, p {
+    display: flex !important;
+}
