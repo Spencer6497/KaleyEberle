@@ -3,6 +3,50 @@ img {
     margin: auto;
 }
 
-h2, p {
+col h2, col p {
     display: flex !important;
+}
+
+/* Mobile */
+@media (max-width:767px) {
+    img {
+        height: 30vh;
+    }
+
+    .col h2, .col p {
+        text-align: center;
+    }
+
+    .col {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    #aboutMeSection {
+        padding: 0 2.5rem 0 2.5rem;
+    }
+}
+
+/* Tablet */
+@media (max-width:1024px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    .col h2, .col p {
+        text-align: center;
+    }
+
+    #aboutMeSection {
+        padding: 0 2.5rem 0 2.5rem;
+    }
 }
