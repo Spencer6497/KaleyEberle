@@ -2,6 +2,9 @@ body {
     padding-top: 90px;
 }
 
+.card {
+    display: none;
+}
 
 .navbar.fixed-left {
     position: fixed;
@@ -15,12 +18,6 @@ body {
     border-radius: 0.5rem !important;
 }
 
-/* Animate card fade-in */
-/* .card {
-    animation: fadeIn 2.2s 1;
-    animation-fill-mode: forwards;
-} */
-
 @keyframes fadeIn {
     0% {
         opacity: 0.0;
@@ -30,7 +27,7 @@ body {
     }
 }
 
-/* dropdown stuff */
+/*#region dropdown stuff*/
 .dropdown .dropdown-menu {
     -webkit-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
     -moz-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0.3s;
@@ -75,6 +72,7 @@ body {
     box-shadow: unset;
     border: none;
 }
+/*#endregion*/
 
 /* Mobile */
 @media (max-width:767px) {
@@ -84,6 +82,10 @@ body {
 
     h4 {
         margin-bottom: 0;
+    }
+
+    .page-footer {
+        display: none;
     }
 
     .navbar-collapse.collapse.show, .navbar-collapse.collapsing {
@@ -202,7 +204,22 @@ body {
     }
 
     .card-deck {
-        margin-bottom: 1rem;
+        margin-left: 0px !important;
+        width:100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card-deck>* {
+        flex: 1 1 calc(30% - 20px) !important;
+    }
+
+    .card {
+        margin: 15px;
+    }
+
+    #mainDisplay .card {
+        display: none;
     }
 
     .nav-link {
