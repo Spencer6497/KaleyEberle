@@ -1,3 +1,16 @@
+@font-face {
+    font-family: trippyFont;
+    src: url(../Village-wLn3.ttf);
+}
+
+#mainBrand {
+    font-family: trippyFont;
+}
+
+h1 {
+    margin-bottom: 0 !important;
+}
+
 body {
     padding-top: 90px;
 }
@@ -16,6 +29,14 @@ body {
 
 .card, img {
     border-radius: 0.5rem !important;
+}
+
+.navbar {
+    background-image: url("../img/trippy.jpeg");
+}
+
+#socialLinks > a {
+    padding: 8px !important;
 }
 
 @keyframes fadeIn {
@@ -220,6 +241,14 @@ body {
 
     #mainDisplay .card {
         display: none;
+    }
+
+    #socialLinks {
+        justify-content: left !important;
+    }
+
+    #socialLinks a:first-child {
+        padding-left: 0px !important;
     }
 
     .nav-link {
