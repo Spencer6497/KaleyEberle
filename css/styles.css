@@ -9,15 +9,33 @@
 
 .nav-item > .nav-link {
     font-family: trippyFont;
+    letter-spacing: 0.1em;
 }
 
-iframe {
-    width: 80%;
-    height: auto;
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: 
+    hidden; 
+    max-width: 100%; 
+} 
+
+.embed-container iframe, .embed-container object, .embed-container embed { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
 }
 
 h1 {
     margin-bottom: 0 !important;
+    font-family: trippyFont;
+}
+
+h4 {
+    letter-spacing: 0.1em;
 }
 
 body {
@@ -34,10 +52,6 @@ body {
     left: 0;
     right: 0;
     z-index: 1030
-}
-
-.card, img {
-    border-radius: 0.5rem !important;
 }
 
 .navbar {
@@ -115,8 +129,8 @@ body {
         margin-bottom: 0;
     }
 
-    .page-footer {
-        display: none;
+    body {
+        padding-top: 78px;
     }
 
     .navbar-collapse.collapse.show, .navbar-collapse.collapsing {
@@ -133,6 +147,18 @@ body {
 
     #navHolder {
         padding-top: 25vh;
+    }
+
+    #landing img {
+        width: 100%;
+        height: 100%;
+        filter: opacity(70%);
+    }
+    
+    #landing {
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
     }
 
     nav {
@@ -253,6 +279,18 @@ body {
         display: none;
     }
 
+    #landing img {
+        width: 100%;
+        height: 100%;
+        filter: opacity(70%);
+    }
+    
+    #landing {
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+
     #socialLinks {
         justify-content: left !important;
     }
@@ -307,8 +345,102 @@ body {
 
 /* Desktop only */
 @media (min-width:1025px) {
+    html {
+        height: 100vh;
+    }
+
     body {
         margin-left: 18vw;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0;
+        background: transparent;
+    }
+
+    #landing {
+        background-image: url(../img/cover2.jpg);
+        background-blend-mode: lighten;
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        max-width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 80vh;
+    }
+
+    #landing .flex-column {
+        margin: 0;
+    }
+
+    .overlay-container {
+        margin: 5% !important;
+        height: 80%;
+    }
+
+    .text-overlay {
+        display: flex;
+        font-family: trippyFont;
+        /* animation: 2s slide-down; */
+        text-shadow: -4px 4px #ef3550,
+                -8px 8px #f48fb1,
+                -12px 12px #7e57c2,
+                -16px 16px #2196f3,
+                -20px 20px #26c6da,
+                -24px 24px #43a047,
+                -28px 28px #eeff41,
+                -32px 32px #f9a825,
+                -36px 36px #ff5722;
+    }
+
+    #line1 {
+        animation: 2.5s slide-right;
+    }
+
+    #line2 {
+        animation: 2.5s slide-right-2;
+    }
+
+    #line3 {
+        animation: 2.5s slide-right-3;
+    }
+
+    @keyframes slide-right {
+        from {
+            margin-left: -100%;
+            width: 200%
+        }
+        
+        to {
+            margin-left: 0%;
+            width: 100%;
+        }
+    }
+
+    @keyframes slide-right-2 {
+        from {
+            margin-left: -200%;
+            width: 200%
+        }
+        
+        to {
+            margin-left: 0%;
+            width: 100%;
+        }
+    }
+
+    @keyframes slide-right-3 {
+        from {
+            margin-left: -300%;
+            width: 200%
+        }
+        
+        to {
+            margin-left: 0%;
+            width: 100%;
+        }
     }
 
     .card-deck>* {
