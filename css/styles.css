@@ -7,9 +7,26 @@
     font-family: trippyFont;
 }
 
-/* #mainSection {
-    margin: 2.5%;
-} */
+#mainSection {
+    margin: 0 !important;
+}
+
+#mainSection .row {
+    padding: 1.5rem;
+}
+
+#mainBooking {
+    flex-direction: column;
+}
+
+#mainBookingRow {
+    justify-content: center;
+    padding-top: 0 !important;
+}
+
+#mainBookingText {
+    justify-content: center;
+}
 
 .nav-item > .nav-link {
     font-family: trippyFont;
@@ -36,6 +53,7 @@
 h1 {
     margin-bottom: 0 !important;
     font-family: trippyFont;
+    text-align: center;
 }
 
 h4 {
@@ -133,10 +151,6 @@ body {
         margin-bottom: 0;
     }
 
-    h1 {
-        text-align: center;
-    }
-
     body {
         padding-top: 78px;
     }
@@ -161,6 +175,10 @@ body {
         width: 100%;
         height: 100%;
         filter: opacity(70%);
+    }
+
+    .mainImg {
+        height: 30vh;
     }
     
     #landing {
@@ -357,6 +375,14 @@ body {
         height: 100vh;
     }
 
+    h1 {
+        text-align: left;
+    }
+
+    h1.mainText {
+        text-align: center;
+    }
+
     body {
         margin-left: 18vw;
     }
@@ -381,6 +407,18 @@ body {
 
     #landing .flex-column {
         margin: 0;
+    }
+
+    #mainBooking {
+        justify-content: center;
+    }
+
+    #mainBookingRow {
+        justify-content: left;
+    }
+
+    #mainBookingText {
+        justify-content: left;
     }
 
     .overlay-container {
