@@ -129,6 +129,10 @@ body {
         margin-bottom: 0;
     }
 
+    h1 {
+        text-align: center;
+    }
+
     body {
         padding-top: 78px;
     }
