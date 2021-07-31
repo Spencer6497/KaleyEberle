@@ -7,6 +7,10 @@
     font-family: trippyFont;
 }
 
+/* #mainSection {
+    margin: 2.5%;
+} */
+
 .nav-item > .nav-link {
     font-family: trippyFont;
     letter-spacing: 0.1em;
