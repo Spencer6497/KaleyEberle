@@ -33,22 +33,29 @@
     letter-spacing: 0.1em;
 }
 
-.embed-container { 
-    position: relative; 
-    padding-bottom: 56.25%; 
-    height: 0; 
-    overflow: 
-    hidden; 
-    max-width: 100%; 
-} 
-
-.embed-container iframe, .embed-container object, .embed-container embed { 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
+/* #region video */
+.videoRow {
+    padding: 0 !important;
 }
+
+.embed-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+  
+  /* Then style the iframe to fit in the container div with full height and width */
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+/* #endregion */
 
 h1 {
     margin-bottom: 0 !important;
@@ -175,6 +182,10 @@ body {
         width: 100%;
         height: 100%;
         filter: opacity(70%);
+    }
+
+    #mainBookingText {
+        font-size: xx-large;
     }
 
     .mainImg {
@@ -305,6 +316,10 @@ body {
         display: none;
     }
 
+    .mainImg {
+        height: 30vh;
+    }
+
     #landing img {
         width: 100%;
         height: 100%;
@@ -396,7 +411,6 @@ body {
         background-image: url(../img/cover2.jpg);
         background-blend-mode: lighten;
         display: inline-block;
-        overflow: hidden;
         position: relative;
         max-width: 100%;
         background-repeat: no-repeat;
@@ -421,11 +435,16 @@ body {
         justify-content: left;
     }
 
+    .mainImg {
+        height: 40vh;
+    }
+
     .overlay-container {
         margin: 5% !important;
         height: 80%;
     }
 
+    /*#region desktop slide text stuff*/
     .text-overlay {
         display: flex;
         font-family: trippyFont;
@@ -441,31 +460,11 @@ body {
                 -36px 36px #ff5722;
     }
 
-    #line1 {
-        animation: 2.5s slide-right;
-    }
-
     #line2 {
-        animation: 2.5s slide-right-2;
-    }
-
-    #line3 {
-        animation: 2.5s slide-right-3;
+        animation: 1.5s slide-right;
     }
 
     @keyframes slide-right {
-        from {
-            margin-left: -100%;
-            width: 200%
-        }
-        
-        to {
-            margin-left: 0%;
-            width: 100%;
-        }
-    }
-
-    @keyframes slide-right-2 {
         from {
             margin-left: -200%;
             width: 200%
@@ -476,18 +475,7 @@ body {
             width: 100%;
         }
     }
-
-    @keyframes slide-right-3 {
-        from {
-            margin-left: -300%;
-            width: 200%
-        }
-        
-        to {
-            margin-left: 0%;
-            width: 100%;
-        }
-    }
+    /*#endregion*/
 
     .card-deck>* {
         flex: 1 1 calc(30% - 20px) !important;
