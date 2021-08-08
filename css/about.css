@@ -7,10 +7,29 @@ col h2, col p {
     display: flex !important;
 }
 
+body {
+    height: 100%;
+}
+
+#mainDisplay {
+    background-image: url("../img/rainbow_drip.png");
+    background-attachment: fixed;
+    max-width: none !important;
+    height: 100%;
+}
+
 /* Mobile */
 @media (max-width:767px) {
     img {
         height: 30vh;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+    .container {
+        height: 100%;
     }
 
     .col h2, .col p {
@@ -28,6 +47,10 @@ col h2, col p {
 
     #aboutMeSection {
         padding: 0 2.5rem 0 2.5rem;
+    }
+
+    #mainDisplay {
+        justify-content: space-between;
     }
 }
 
@@ -48,5 +71,23 @@ col h2, col p {
 
     #aboutMeSection {
         padding: 0 2.5rem 0 2.5rem;
+    }
+}
+
+/* Desktop only */
+@media (min-width:1025px) {
+    .imgCol {
+        flex-grow: 0;
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+
+    .imgCol img {
+        margin: 0;
+    }
+
+    #aboutMeSection {
+        flex-grow: .7;
+        margin-left: 5%;
     }
 }

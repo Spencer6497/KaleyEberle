@@ -3,12 +3,18 @@
     src: url(../fonts/martinaFont.ttf);
 }
 
+html {
+    height: 100vh;
+}
+
 #mainBrand {
     font-family: trippyFont;
 }
 
 #mainSection {
     margin: 0 !important;
+    background-image: url("../img/rainbow_drip.png");
+    background-attachment: fixed;
 }
 
 #mainSection .row {
@@ -386,10 +392,6 @@ body {
 
 /* Desktop only */
 @media (min-width:1025px) {
-    html {
-        height: 100vh;
-    }
-
     h1 {
         text-align: left;
     }
