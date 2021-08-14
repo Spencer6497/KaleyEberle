@@ -154,6 +154,37 @@ body {
 }
 /*#endregion*/
 
+/* #region Carousel stuff */
+
+.carousel-item img {
+    filter: brightness(50%);
+}
+
+.carousel-caption h5, .carousel-caption p {
+    font-family: trippyFont;
+    margin: 0;
+}
+
+.carousel-caption {
+    padding: 0;
+    height: 100%;
+    top: 0;
+}
+
+#pastEvents {
+    font-family: trippyFont;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+#pastEventsRow {
+    justify-content: center;
+    padding: 0 !important;
+}
+
+/* #endregion */
+
 /* Mobile */
 @media (max-width:767px) {
     #navbar-content {
@@ -303,6 +334,14 @@ body {
         padding-left: 0;
     }
 
+    #pastEvents {
+        font-size: 3rem;
+    }
+
+    .carousel-caption h5, .carousel-caption p {
+        font-size: 1.5rem;
+    }
+
     .card-deck {
         margin-left: 0px !important;
         width:100%;
@@ -396,8 +435,8 @@ body {
         text-align: left;
     }
 
-    h1.mainText {
-        text-align: center;
+    .carousel-caption h5, .carousel-caption p {
+        font-size: 3rem;
     }
 
     body {
