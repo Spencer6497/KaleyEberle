@@ -94,6 +94,11 @@ body {
     filter: invert(100%);
 }
 
+.navbar iframe {
+    filter: invert(100%);
+    margin-right: -30vw;
+}
+
 #socialLinks > a {
     padding: 8px !important;
 }
