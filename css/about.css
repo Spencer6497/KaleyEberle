@@ -12,7 +12,7 @@ body {
 }
 
 #mainDisplay {
-    background-image: url("../img/rainbow_drip.png");
+    background-image: url("../img/rainbow_drip.jpeg");
     background-attachment: fixed;
     max-width: none !important;
     height: 100%;
